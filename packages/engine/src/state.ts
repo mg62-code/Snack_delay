@@ -1,0 +1,100 @@
+import { LifeState } from './types.js';
+
+export function createInitialState(seed?: number): LifeState {
+  return {
+    meta: {
+      version: '1.0.0',
+      tick: 0,
+      timestamp: new Date().toISOString(),
+      seed,
+    },
+    person: {
+      age: 25,
+      education: 'bachelor',
+      traits: [],
+      cognitiveProfile: {
+        lossAversion: 1.0,
+        optimismBias: 0.3,
+        hyperbolicDiscounting: 0.4,
+        sunkCostSensitivity: 0.3,
+      },
+    },
+    vitals: {
+      health: 80,
+      energy: 75,
+      stress: 25,
+      mood: 70,
+      sleepDebt: 0,
+    },
+    emotions: {
+      anxiety: 20,
+      pride: 50,
+      loneliness: 20,
+      resentment: 10,
+    },
+    finance: {
+      cash: 5000,
+      incomeMonthly: 3500,
+      expensesMonthly: 2800,
+      debt: 8000,
+      creditScore: 680,
+      assets: [],
+      taxRate: 0.28,
+    },
+    career: {
+      jobTitle: 'Junior Developer',
+      employer: 'TechCorp GmbH',
+      seniority: 25,
+      performance: 65,
+      riskOfLayoff: 15,
+      monthsInRole: 6,
+      reputation: { software: 30 },
+    },
+    skills: {
+      programming: 55,
+      communication: 45,
+      leadership: 20,
+      finance_knowledge: 25,
+      creativity: 40,
+      focus: 50,
+    },
+    habits: [],
+    relationships: [
+      {
+        id: 'rel_maria',
+        name: 'Maria',
+        type: 'family',
+        closeness: 70,
+        trust: 85,
+        conflict: 10,
+        lastContactTick: 0,
+      },
+      {
+        id: 'rel_jonas',
+        name: 'Jonas',
+        type: 'friend',
+        closeness: 60,
+        trust: 70,
+        conflict: 5,
+        lastContactTick: 0,
+      },
+      {
+        id: 'rel_sarah',
+        name: 'Sarah',
+        type: 'colleague',
+        closeness: 40,
+        trust: 55,
+        conflict: 20,
+        lastContactTick: 0,
+      },
+    ],
+    location: {
+      country: 'DE',
+      city: 'Berlin',
+      costIndex: 1.15,
+    },
+    inventory: {},
+    flags: {},
+    history: [],
+  };
+}

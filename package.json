@@ -1,0 +1,13 @@
+{
+  "name": "snack-delay",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @snack/backend dev\" \"pnpm --filter @snack/frontend dev\"",
+    "build": "pnpm --filter @snack/frontend build",
+    "test": "pnpm --filter @snack/engine test",
+    "test:watch": "pnpm --filter @snack/engine test:watch"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
